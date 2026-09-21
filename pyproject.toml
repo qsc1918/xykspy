@@ -1,0 +1,27 @@
+
+[project]
+name = "pythonproject1"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "mtc",
+    "numpy>=2.4.1",
+    "opencv-contrib-python>=4.11.0.86",
+    "paddleocr>=3.4.1",
+    "paddlepaddle-gpu==3.3.1",
+    "pillow>=12.1.0",
+    "pynput>=1.8.2",
+]
+[[tool.uv.index]]
+name = "paddle"
+url = "https://www.paddlepaddle.org.cn/packages/stable/cu129/"
+explicit = true
+
+[tool.uv.sources]
+paddlepaddle-gpu = { index = "paddle" }
+mtc = { git = "https://github.com/NakanoSanku/mtc" }
+
+[tool.uv]
+override-dependencies = [
+    "opencv-contrib-python>=4.11.0.86",
+]
